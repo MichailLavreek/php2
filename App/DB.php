@@ -6,6 +6,6 @@ class DB
 {
     public function __construct()
     {
-        echo 'hello';
+        $dbh = new \PDO('mysql:host=localhost;dbname=test', 'root', '');
     }
 }

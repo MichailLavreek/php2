@@ -4,7 +4,7 @@ require __DIR__ . '/../../autoload.php';
 
 function querry() 
 {
-    $db = new \App\DB();
+    $db = \App\DB::getInstance();
     $data = $db->query('SELECT * FROM users WHERE id=:id', '\App\Models\User', [':id' => '1'])[0];
     if ($data->name === 'иван') {
         return true;
@@ -18,7 +18,7 @@ if (assert(querry())) {
 
 function execute()
 {
-    $db = new \App\DB();
+    $db = \App\DB::getInstance();
     $answer = $db->execute('SELECT * FROM users WHERE id=:id', [':id' => '1']);
     return $answer;
 }

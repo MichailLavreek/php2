@@ -4,11 +4,19 @@ namespace App;
 
 class DB
 {
+    use Singleton;
+
     protected $dbh;
 
-    public function __construct()
+    protected function __construct()
     {
-        $this->dbh = new \PDO('mysql:host=localhost;dbname=test', 'root', '');
+        $config = \App\Config::getInstance();
+        $data = $config->data['db'];
+        $sth = 'mysql:host=' . $data['host'] . ';dbname=' . $data['dbname'];
+        $user = $data['user'];
+        $pass = $data['pass'];
+
+        $this->dbh = new \PDO($sth, $user, $pass);
     }
     
     public function execute($sql, $params = [])
@@ -27,5 +35,9 @@ class DB
         }
         return [];
     }
-    
+
+    public function getLastId()
+    {
+        return $this->dbh->lastInsertId();
+    }
 }

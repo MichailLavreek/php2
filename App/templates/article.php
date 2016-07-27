@@ -12,9 +12,9 @@
 -->
 
 
-<h1><?php echo $data->title; ?></h1>
-<p><?php echo $data->text; ?></p>
-<a href="/">На главную</a>
+<h1><?php echo $user->name; ?></h1>
+<p><?php echo $user->email; ?></p>
+<a href="../Controllers/index.php">На главную</a>
 
 </body>
 </html>

@@ -6,7 +6,7 @@ use App\Models\News;
 
 if (isset($_GET['create']) && true == $_GET['create']) {
     $singleNews = new News();
-    include __DIR__ . '/Templates/article.php';
+    include __DIR__ . '/templates/article.php';
 }
 
 if (isset($_GET['del']) && true == $_GET['del']) {
@@ -36,5 +36,5 @@ if (isset($_GET['upd']) && empty($_POST['id'])) {
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $singleNews = News::findById($id);
-    include __DIR__ . '/Templates/article.php';
+    include __DIR__ . '/templates/article.php';
 }

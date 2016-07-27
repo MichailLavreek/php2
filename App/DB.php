@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Traits\Singleton;
+
 class DB
 {
     use Singleton;
@@ -10,7 +12,7 @@ class DB
 
     protected function __construct()
     {
-        $config = \App\Config::getInstance();
+        $config = Config::getInstance();
         $data = $config->data['db'];
         $sth = 'mysql:host=' . $data['host'] . ';dbname=' . $data['dbname'];
         $user = $data['user'];

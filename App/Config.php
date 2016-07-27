@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Traits\Singleton;
+
 class Config
 {
     use Singleton;

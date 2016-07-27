@@ -5,13 +5,13 @@
     <title>Document</title>
 </head>
 <body>
-<?php foreach ($data as $item) : ?>
+<?php foreach ($users as $user) : ?>
 
-    <h1><?php echo $item->title; ?></h1>
-    <p><?php echo $item->text; ?></p>
-    <a href="/App/Controllers/article.php?id=<?php echo $item->id; ?>">На страницу новости</a>
+    <h1><?php echo $user->name; ?></h1>
+    <p><?php echo $user->email; ?></p>
+    <a href="/App/Controllers/article.php?id=<?php echo $user->id; ?>">На страницу новости</a>
 
 <?php endforeach; ?>
-
+ 
 </body>
 </html>

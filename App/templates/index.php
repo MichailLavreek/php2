@@ -5,11 +5,12 @@
     <title>Document</title>
 </head>
 <body>
-<?php foreach ($users as $user) : ?>
+<?php foreach ($news as $new) : ?>
 
-    <h1><?php echo $user->name; ?></h1>
-    <p><?php echo $user->email; ?></p>
-    <a href="/App/Controllers/article.php?id=<?php echo $user->id; ?>">На страницу новости</a>
+    <h1><?php echo $new->title; ?></h1>
+    <p><?php echo $new->text; ?></p>
+    <p><?php echo $new->author->name; ?></p>
+    <a href="/App/Controllers/article.php?id=<?php echo $new->id; ?>">На страницу новости</a>
 
 <?php endforeach; ?>
  

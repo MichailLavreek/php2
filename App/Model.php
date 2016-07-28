@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Exceptions\Error404;
+
 abstract class Model
 {
     const TABLE = '';
@@ -26,10 +28,12 @@ abstract class Model
             [':id' => $id]
         );
         
-        if (!empty($rezArr)) {
-            return $rezArr[0];
+        if (empty($rezArr)) {
+            $exception = new Error404('Запись не найдена');
+            throw $exception;
         }
-        return false;
+        
+        return $rezArr[0];
     }
 
     public function isNew()

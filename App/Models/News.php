@@ -40,4 +40,9 @@ class News extends Model
 
         return new Author();
     }
+
+    public function fill($data)
+    {
+        
+    }
 }

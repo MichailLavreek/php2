@@ -18,7 +18,13 @@ class DB
         $user = $data['user'];
         $pass = $data['pass'];
 
-        $this->dbh = new \PDO($sth, $user, $pass);
+        try {
+            $this->dbh = new \PDO($sth, $user, $pass);
+        } catch (\Exception $e) {
+            $exception = new Exceptions\DB('Не удалось соеденится с базой');
+            throw $exception;
+        }
+        
     }
     
     public function execute($sql, $params = [])

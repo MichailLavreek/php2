@@ -10,7 +10,7 @@
     <h1><?php echo $new->title; ?></h1>
     <p><?php echo $new->text; ?></p>
     <p><?php echo $new->author->name; ?></p>
-    <a href="/App/Controllers/article.php?id=<?php echo $new->id; ?>">На страницу новости</a>
+    <a href="?act=DisplayOne&id=<?php echo $new->id; ?>">На страницу новости</a>
 
 <?php endforeach; ?>
  

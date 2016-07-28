@@ -2,5 +2,11 @@
 
 require __DIR__ . '/autoload.php';
 
-$news = \App\Models\News::findById(3);
-var_dump($news->author);
+$url = $_SERVER['REQUEST_URI'];
+
+$controller = (!empty($_GET['ctr'])) ? $_GET['ctr'] : 'News';
+$controller = '\App\Controllers\\' . $controller;
+$action = (!empty($_GET['act'])) ? $_GET['act'] : 'Default';
+
+$index = new $controller;
+$index->action($action);

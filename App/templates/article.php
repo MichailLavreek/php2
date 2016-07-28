@@ -15,7 +15,7 @@
 <h1><?php echo $news->title; ?></h1>
 <p><?php echo $news->text; ?></p>
 <p><?php echo $news->author->name; ?></p>
-<a href="../Controllers/index.php">На главную</a>
+<a href="/Index.php">На главную</a>
 
 </body>
 </html>

@@ -13,7 +13,7 @@ if (isset($_GET['del']) && true == $_GET['del']) {
     $id = $_GET['id'];
     $singleNews = News::findById($id);
     $singleNews->delete();
-    header('Location:index.php');
+    header('Location:all-news.php');
 }
 
 if (isset($_GET['upd']) && !empty($_POST['id'])) {
@@ -22,7 +22,7 @@ if (isset($_GET['upd']) && !empty($_POST['id'])) {
     $singleNews->title = $_POST['title'];
     $singleNews->text = $_POST['text'];
     $singleNews->save();
-    header('Location:index.php');
+    header('Location:all-news.php');
 }
 
 if (isset($_GET['upd']) && empty($_POST['id'])) {
@@ -30,7 +30,7 @@ if (isset($_GET['upd']) && empty($_POST['id'])) {
     $singleNews->title = $_POST['title'];
     $singleNews->text = $_POST['text'];
     $singleNews->save();
-    header('Location:index.php');
+    header('Location:all-news.php');
 }
 
 if (isset($_GET['id'])) {

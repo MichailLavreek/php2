@@ -3,6 +3,7 @@
 require __DIR__ . '/autoload.php';
 
 $url = $_SERVER['REQUEST_URI'];
+var_dump($url);
 
 $controller = (!empty($_GET['ctr'])) ? $_GET['ctr'] : 'News';
 $controller = '\App\Controllers\\' . $controller;

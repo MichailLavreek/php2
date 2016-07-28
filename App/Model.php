@@ -62,7 +62,7 @@ abstract class Model
     {
         $keyValue = '';
         foreach ($this as $k => $value) {
-            if ('id' == $k) {
+            if ('id' == $k || 'data' == $k) {
                 continue;
             }
 

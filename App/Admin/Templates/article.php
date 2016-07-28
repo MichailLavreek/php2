@@ -6,15 +6,15 @@
 </head>
 <body>
 
-<form action="article.php?upd=true" method="post">
-    <input type="number" hidden name="id" value="<?php echo $singleNews->id; ?>">
+<form action="?act=Save&id=<?php echo $news->id; ?>" method="post">
+    <input type="number" hidden name="id" value="<?php echo $news->id; ?>">
     <h2>Заголовок</h2>
-    <input type="text" name="title" required value="<?php echo $singleNews->title; ?>">
+    <input type="text" name="title" required value="<?php echo $news->title; ?>">
     <h2>Текст</h2>
-    <textarea name="text" cols="30" rows="10" required><?php echo $singleNews->text; ?></textarea>
+    <textarea name="text" cols="30" rows="10" required><?php echo $news->text; ?></textarea>
     <input type="submit" value="Обновить">
 </form>
-<a href="article.php?del=true&id=<?php echo $singleNews->id; ?>">Удалить новость</a>
+<a href="article.php?del=true&id=<?php  ?>">Удалить новость</a>
 
 <a href="index.php">Вернутся</a>
 

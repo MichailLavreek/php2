@@ -2,8 +2,11 @@
 
 require __DIR__ . '/../../autoload.php';
 
-use App\Models\News;
+$url = $_SERVER['REQUEST_URI'];
 
-$data = News::findAll();
+$controller = (!empty($_GET['ctr'])) ? $_GET['ctr'] : 'News';
+$controller = '\App\Admin\Controllers\\' . $controller;
+$action = (!empty($_GET['act'])) ? $_GET['act'] : 'Default';
 
-include __DIR__ . '/templates/index.php';
+$index = new $controller;
+$index->action($action);

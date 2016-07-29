@@ -37,7 +37,7 @@ trait TCollection
 
     public function offsetExists($offset)
     {
-        return array_key_exists($this->data , $offset);
+        return array_key_exists($offset, $this->data);
     }
 
     public function offsetGet($offset)
@@ -47,7 +47,11 @@ trait TCollection
 
     public function offsetSet($offset, $value)
     {
-        $this->data[$offset] = $value;
+        if ('' == $offset) {
+            $this->data[] = $value;
+        } else {
+            $this->data[$offset] = $value;
+        }
     }
 
     public function offsetUnset($offset)

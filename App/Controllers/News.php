@@ -18,5 +18,11 @@ class News extends Controller
         $this->view->news = \App\Models\News::findById($id);
         echo $this->view->render(__DIR__ . '/../templates/article.php');
     }
+
+    protected function actionFill()
+    {
+        $news = new \App\Models\News();
+        $news->fill(['title'=>'заголовок', 'text'=>'текст']);
+    }
 }
 

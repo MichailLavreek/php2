@@ -3,3 +3,25 @@
 16-07-29  11:06:38 = C:\OpenServer\domains\php2\App\Models\News.php  line: 59
 Нет текста!
 
+16-07-29  14:21:49 = C:\OpenServer\domains\php2\App\DB.php  line: 24
+Не удалось соеденится с базой
+16-07-29  14:23:06 = C:\OpenServer\domains\php2\App\DB.php  line: 24
+Не удалось соеденится с базой
+16-07-29  14:23:18 = C:\OpenServer\domains\php2\App\DB.php  line: 24
+Не удалось соеденится с базой
+[__METHOD__]16-07-29  14:23:45 = C:\OpenServer\domains\php2\App\DB.php  line: 24
+Не удалось соеденится с базой
+[__METHOD__]16-07-29  14:24:29 = C:\OpenServer\domains\php2\App\DB.php  line: 24
+Не удалось соеденится с базой
+[App\Logger::exception]16-07-29  14:25:31 = C:\OpenServer\domains\php2\App\DB.php  line: 24
+Не удалось соеденится с базой
+[exception]16-07-29  14:28:26 = C:\OpenServer\domains\php2\App\DB.php  line: 24
+Не удалось соеденится с базой
+[EXCEPTION]16-07-29  14:29:09 = C:\OpenServer\domains\php2\App\DB.php  line: 24
+Не удалось соеденится с базой
+[WARNING] 16-07-29  14:45:57 = C:\OpenServer\domains\php2\App\DB.php  line: 24
+Не удалось соеденится с базой
+[WARNING] 16-07-29  14:51:10 = C:\OpenServer\domains\php2\App\DB.php  line: 24
+Не удалось соеденится с базой
+[NOTICE] 16-07-29  14:51:36 = C:\OpenServer\domains\php2\App\Controllers\News.php  line: 22
+Запись не найдена

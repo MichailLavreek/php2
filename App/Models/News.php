@@ -17,7 +17,7 @@ class News extends Model
     public $title;
     public $text;
     public $author_id;
-    
+
     public static function getLastNews($num)
     {
         $rez = static::findAll();

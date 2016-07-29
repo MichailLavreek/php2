@@ -46,7 +46,7 @@ class News extends Model
     public function fill($data)
     {
         $multiException = new MultiException();
-        
+
         if (isset($data['title'])) {
             $this->title = $data['title'];
         } else {

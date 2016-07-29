@@ -11,9 +11,6 @@
     
     echo $errorMessage;
 
-    var_dump($exception);
-
-    echo date('y-m-d  G:i:s') . ' = ' . $exception->getFile() . ' \n' . $exception->getMessage();
     ?>
 </h1>
 

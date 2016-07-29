@@ -1,12 +1,5 @@
-16-07-29  10:15:03 = C:\OpenServer\domains\php2\App\DB.php  line: 24
-Не удалось соеденится с базой
-
-16-07-29  10:15:16 = C:\OpenServer\domains\php2\App\DB.php  line: 24
-Не удалось соеденится с базой
-
-16-07-29  10:28:59 = C:\OpenServer\domains\php2\App\DB.php  line: 24
-Не удалось соеденится с базой
-
-16-07-29  10:30:06 = C:\OpenServer\domains\php2\App\DB.php  line: 24
-Не удалось соеденится с базой
+16-07-29  11:06:38 = C:\OpenServer\domains\php2\App\Models\News.php  line: 53
+Нет заголовка!
+16-07-29  11:06:38 = C:\OpenServer\domains\php2\App\Models\News.php  line: 59
+Нет текста!
 

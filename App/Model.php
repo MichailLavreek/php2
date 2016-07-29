@@ -27,13 +27,13 @@ abstract class Model
             static::class,
             [':id' => $id]
         );
-        
-        if (empty($rezArr)) {
-            $exception = new Error404('Запись не найдена');
-            throw $exception;
+
+        if (!empty($rezArr)) {
+            return $rezArr[0];
+        } else {
+            return null;
         }
-        
-        return $rezArr[0];
+
     }
 
     public function isNew()

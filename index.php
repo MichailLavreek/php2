@@ -28,5 +28,10 @@ try {
     $controller = new \App\Controllers\Error($e);
     $controller->action('Default');
 
+} catch (\App\Exceptions\MultiException $e) {
+
+    $controller = new \App\Controllers\Error($e);
+    $controller->action('Default');
+    
 }
 

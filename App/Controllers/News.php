@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controller;
+use App\Exceptions\Error404;
 
 class News extends Controller
 {
@@ -16,13 +17,21 @@ class News extends Controller
     {
         $id = $_GET['id'];
         $this->view->news = \App\Models\News::findById($id);
+
+        if (empty($this->view->news)) {
+            $exception = new Error404('Запись не найдена');
+            throw $exception;
+        }
+        
         echo $this->view->render(__DIR__ . '/../templates/article.php');
     }
 
     protected function actionFill()
     {
+        $data = ['title'=>'заголовок', 'text'=>'текст'];
+        
         $news = new \App\Models\News();
-        $news->fill(['title'=>'заголовок', 'text'=>'текст']);
+        $news->fill($data);
     }
 }
 
